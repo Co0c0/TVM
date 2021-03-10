@@ -75,9 +75,9 @@ TVM透過兩種方式生成代碼:
     }
 
 為了實現Python跟C++混和編程，TVM使用了統一的PackedFunc機制。PackedFunc可以將C++中的各類函數打包成統一函數的接口，並自動導出到Python模塊中進行調用，並且也支持Python中註冊一個函數，偽裝成PackedFunc在C++和Python中調用
-在build_module.cc中，利用Packedy註冊一個function->FuncRelayBuildModule
+在build_module.cc中，利用Packed形成一個function->FuncRelayBuildModule
 
-### code(Line 123)
+### FuncRelayBuildModule code(Line 123)
 
     class RelayBuildModule : public runtime::ModuleNode {
      public:
@@ -98,7 +98,7 @@ TVM透過兩種方式生成代碼:
 
 TVM對Build函數做了一次封裝返回一個PackedFunc，即RelayBuildModule類成員函數Build:
 
-# this->Build(...) code (Line 237)
+### this->Build(...) code (Line 237)
 
     void Build(IRModule mod, const TargetsMap& targets, const tvm::Target& target_host) {
       targets_ = targets;
