@@ -1,3 +1,3 @@
-# 理解
+# reference
 
-在這裡將講解一些有關relay.build_module
+https://zhuanlan.zhihu.com/p/257150960
