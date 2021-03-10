@@ -201,9 +201,9 @@ GetTargetHost():是改良之前的
 
 下面看到TVM逐步的動作
 
-1.計算圖優化: relay_module=Optimize(relay_module,targets_,params)
-2.計算圖生成
-3.後端運行代碼生成
+1. 計算圖優化: relay_module=Optimize(relay_module,targets_,params)
+2. 計算圖生成
+3. 後端運行代碼生成
 
 
 # 計算圖優化
